@@ -1,4 +1,5 @@
 # BeyinJimnastiği
+![BeyinJimnastiği](twitter_avatar.png)
 
 BeyinJimnastiği interaktif bir Twitter hesabıdır. [**Demo hesap için tıklayınız**](https://twitter.com/beyinjim)
 
