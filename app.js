@@ -16,7 +16,7 @@ var T = new Twit({
 var error_count = 0;
 var current_answer;
 var current_question;
-var soru_olustur = function() {
+var create_question = function() {
     var number_one   = ((Math.floor(Math.random() * 15000) + 1) % 200)+1;
     var number_two   = ((Math.floor(Math.random() * 15000) + 1) % 100)+1;
     var number_three = ((Math.floor(Math.random() * 15000) + 1) % 40)+1;
@@ -28,8 +28,8 @@ var soru_olustur = function() {
             number_one = number_two;
             number_two = temp;
     }
-    var islem = Math.floor(Math.random()*6)+1;
-    switch (islem) {
+    var operation = Math.floor(Math.random()*6)+1;
+    switch (operation) {
         case 1:
             question = util.format("%s+%s",number_one,number_two);
             break;
@@ -55,31 +55,31 @@ var soru_olustur = function() {
     return question;
 }
  
-var soru_gonder = function() {
-    var soru = soru_olustur();
-    T.post('statuses/update', { status: soru+" kaç eder ?" }, function(err, data, response) {
+var send_question = function() {
+    var question = create_question();
+    T.post('statuses/update', { status: question+" kaç eder ?" }, function(err, data, response) {
       if(err) {
             error_count++;
             console.log(err);
-                    if(error_count<30)  soru_gonder();
+                    if(error_count<30)  send_question();
       } else {
-            console.log("Soru gonderildi :  " + soru);
+            console.log("Soru gonderildi :  " + question);
       }
     });
 }
  
-var dogru_cevap = function(tweet) {
-    var gonderen = tweet.user.screen_name;
+var correct_answer = function(tweet) {
+    var sender = tweet.user.screen_name;
     var tweet_id = tweet.id_str;
-    var gonderilecek_tweet = util.format("Tebrikler @%s doğru cevap verdin ! (%s) = %s",gonderen,current_question,current_answer);
+    var reply_tweet = util.format("Tebrikler @%s doğru cevap verdin ! (%s) = %s",sender,current_question,current_answer);
 
     
-    T.post('statuses/update', { in_reply_to_status_id : tweet_id, status:gonderilecek_tweet}, function(err, data, response) {
+    T.post('statuses/update', { in_reply_to_status_id : tweet_id, status:reply_tweet}, function(err, data, response) {
         if(err) console.log("Tweet gönderilirken bir hata oluştu !");
         else {
-                console.log(gonderen+" isimli kullanici "+current_question+" sorusunu bildi - sonuc : " + current_answer);
+                console.log(sender+" isimli kullanici "+current_question+" sorusunu bildi - sonuc : " + current_answer);
         }
-        soru_gonder();
+        send_question();
     });
        
 }
@@ -88,7 +88,7 @@ var dogru_cevap = function(tweet) {
 
 // Application engine
 
-soru_gonder();
+send_question();
  
 var stream = T.stream('statuses/filter', { track: '@'+config.username }); // hesabımıza gelen mentionları izlemek için bir stream başlatalım
  
@@ -99,6 +99,6 @@ stream.on('tweet', function (tweet) { // başlattığımız stream'e yeni tweet 
         text = text.replace(/\D/g, ''); // gelen tweet'in sadece numerik halini alalım
 
         if(text==current_answer){ // sonuç doğru ise 
-                dogru_cevap(tweet);
+                correct_answer(tweet);
         }
 })
