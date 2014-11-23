@@ -33,4 +33,7 @@ $ npm install
 
 
 
+
+*Doğru düzgün hata yönetimi vs. yoktur, boş zaman projesidir*
+
 [Twit]:https://github.com/ttezel/twit
