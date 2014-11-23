@@ -1,5 +1,5 @@
 # BeyinJimnastiği
-![BeyinJimnastiği](twitter_avatar.png)
+[![BeyinJimnastiği](twitter_avatar.png)](https://twitter.com/beyinjim)
 
 BeyinJimnastiği interaktif bir Twitter hesabıdır. [**Demo hesap için tıklayınız**](https://twitter.com/beyinjim)
 
