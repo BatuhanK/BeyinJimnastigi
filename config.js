@@ -1,4 +1,4 @@
-module.exports : {
+module.exports = {
 	consumer_key        : 'TWİTTER CONSUMER KEY',
 	consumer_secret     : 'TWİTTER CONSUMER SECRET',
 	access_token        : 'TWİTTER ACCESS TOKEN',
