@@ -1,6 +1,7 @@
 # BeyinJimnastiği
 [![BeyinJimnastiği](twitter_avatar.png)](https://twitter.com/beyinjim)
 
+
 BeyinJimnastiği interaktif bir Twitter hesabıdır. [**Demo hesap için tıklayınız**](https://twitter.com/beyinjim)
 
 
@@ -8,7 +9,9 @@ BeyinJimnastiği interaktif bir Twitter hesabıdır. [**Demo hesap için tıklay
   - Rastgele matematik problemi oluştur
   - Tweet gönder
   - Doğru yanıtı bekle ve **doğru yanıt geldiğinde bu işlemi tekrarla**
-  
+
+[![Örnek cevap](http://imgim.com/sureli.png)](https://twitter.com/BeyinJim/status/536876598818242561)
+
 ### Neler gerekli
 
 BeyinJimnastiği oldukça basit tasarlanmıştır. Kullanmak için **node.js** kurulu bir  ortam ve **yazma izini olan bir Twitter uygulaması** gerekmektedir.
