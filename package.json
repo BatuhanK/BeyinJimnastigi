@@ -1,14 +1,24 @@
 {
   "name": "BeyinJimnastigi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "BeyinJimnastigi interaktif bir twitter hesabidir",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Batuhan KATIRCI",
+  "contributors": [
+    {
+      "name": "Goker Cebeci",
+      "email": "goker@cebeci.name",
+      "url": "http://gokercebeci.com/"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
+    "express": "4.10.0",
+    "mongoose": "3.8.9",
+    "swig": "1.4.2",
     "twit": "^1.1.18"
   }
 }

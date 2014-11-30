@@ -1,7 +1,11 @@
 module.exports = {
-	consumer_key        : 'TWİTTER CONSUMER KEY',
-	consumer_secret     : 'TWİTTER CONSUMER SECRET',
-	access_token        : 'TWİTTER ACCESS TOKEN',
-	access_token_secret : 'TWİTTER ACCESS TOKEN SECRET',
-	username            : 'HESAP USERNAME ( @ işareti olmadan ! )'
+    "mongoose": {
+        "uri": "mongodb://localhost/beyinjimnastigi"
+    },
+    port: 8080,
+    consumer_key: 'TWITTER CONSUMER KEY',
+    consumer_secret: 'TWITTER CONSUMER SECRET',
+    access_token: 'TWITTER ACCESS TOKEN',
+    access_token_secret: 'TWITTER ACCESS TOKEN SECRET',
+    username: 'HESAP USERNAME ( @ işareti olmadan ! )'
 };

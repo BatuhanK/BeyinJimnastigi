@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% parent %}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+
+{% block css %}
+{% parent %}
+{% endblock %}
+
+{% block nav %}
+{% parent %}
+{% endblock %}
+
+{% block content %}
+<div class="site-cover"></div>
+<div class="site-wrapper">
+    <div class="container">
+        <div class="span12">
+            <h2>Scoreboard</h2>
+            <table class="table table-bordered">
+                <tr>
+                    <td>#</td>
+                    <td>Hesap</td>
+                    <td>Doğru</td>
+                    <td>Yanlış</td>
+                    <td>Puan</td>
+                </tr>
+                {% for user in scoreboard %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ user._id.account }}</td>
+                    <td>{{ user.correct }}</td>
+                    <td>{{ user.false }}</td>
+                    <td>{{ user.score }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% parent %}
+{% endblock %}
+
+{% block js %}
+{% parent %}
+{% endblock %}

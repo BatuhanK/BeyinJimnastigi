@@ -1,0 +1,29 @@
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+body > .wrap {
+    min-height: 100% !important;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -70px;
+    padding: 50px 0 70px;
+}
+
+footer {
+    padding: 10px 0;
+    height: 70px;
+    background: #f5f5f5;
+}
+.navbar-brand {
+ padding: 0 !important;
+}
+.navbar-brand img {
+    height: 60px;
+}
+.site-wrapper {
+    padding: 20px 0;
+}
+p.copyright {
+    margin: 10px 0 0;
+}
