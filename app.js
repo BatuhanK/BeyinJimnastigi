@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
                 _id: {account: '$account'}
                 , correct: {$sum: {$cond: [{$eq: ['correct', '$status']}, 1, 0]}}
                 , false: {$sum: {$cond: [{$eq: ['correct', '$status']}, 0, 1]}}
-                , score: {$sum: {$cond: [{$eq: ['correct', '$status']}, 1, .25]}}
+                , score: {$sum: {$cond: [{$eq: ['correct', '$status']}, 1, -0.25]}}
             }
         },
         {
@@ -128,7 +128,17 @@ var create_question = function () {
     current_answer = eval(question);
     last_time = new Date();
 
-    return question;
+    // ara sıra gelen undefinedlar ve negatif cevaplı soruları tekrar üretmek için...
+
+        if(question === undefined || typeof(question) == "undefined" || current_answer<0) {
+            create_question();
+        } else {
+            return question;
+        }
+
+
+    //
+
 }
 
 var send_question = function () {
