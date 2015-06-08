@@ -10,7 +10,7 @@ BeyinJimnastiği interaktif bir Twitter hesabıdır. [**Demo hesap için tıklay
   - Tweet gönder
   - Doğru yanıtı bekle ve **doğru yanıt geldiğinde bu işlemi tekrarla**
 
-[![Örnek cevap](http://imgim.com/sureli.png)](https://twitter.com/BeyinJim/status/536876598818242561)
+[![Örnek cevap](http://i.imgur.com/kBkwACX.png)](https://twitter.com/BeyinJim/status/536876598818242561)
 
 ### Neler gerekli
 
