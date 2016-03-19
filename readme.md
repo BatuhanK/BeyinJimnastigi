@@ -1,8 +1,10 @@
+**Kodlar inanılmaz derecede kirli, hiç bir design pattern kullanılmamış. Giriş seviyesindeki arkadaşlar için bir nebze daha kolay anlaşılır**
+
 # BeyinJimnastiği
 [![BeyinJimnastiği](twitter_avatar.png)](https://twitter.com/beyinjim)
 
 
-**Kodlar inanılmaz derecede kirli, hiç bir design pattern kullanılmamış. Giriş seviyesindeki arkadaşlar için bir nebze daha kolay anlaşılır**
+
 
 BeyinJimnastiği interaktif bir Twitter hesabıdır. [**Demo hesap için tıklayınız**](https://twitter.com/beyinjim)
 
